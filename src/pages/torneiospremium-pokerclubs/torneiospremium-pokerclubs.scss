@@ -1,0 +1,74 @@
+page-torneiospremium-pokerclubs {
+    
+    .scroll-content {
+        background-color: black;
+    }
+
+    .card {
+        background-color: #222;
+        color: #999;
+    }
+
+   .descricao-torneios {
+        color: #999;
+    }
+    
+    .nome-torneios {
+        color: #999;
+    }
+
+    .item-nome-torneios {
+        background-color: #222;       
+    }
+
+    .item-datas-torneios {
+        background-color: #222;
+    }
+
+    .datas-torneios {
+        color: #999;
+    }
+
+    .botao-inscreva-se, .botao-chat, .botao-social, .botao-off {
+       width: 33% !important;
+       min-width: 33% !important;
+       text-align: center !important;
+       padding: 5px !important;
+       font-size: 16px !important;
+       bottom: 10px !important;
+       height: 60px !important;
+       .botao-ico {
+         font-size: 10px !important;
+         padding: 0 !important;
+         height: auto !important;
+         display: unset !important;
+         position: absolute !important;
+         top: 12px !important;
+         right: 5px !important;
+       }
+       .botao-lb {
+         padding: 20px 10px 10px 10px !important;
+       }
+    }
+    .botao-inscreva-se {
+        background-color: #daae21;
+        color: black;
+        font-size: 13px !important;
+    }
+    .botao-chat {
+        background-color: #608829;
+        color: white;
+        font-size: 13px !important;
+    }
+    .botao-social {
+        background-color: #38414e;
+        color: #00BCD4;
+        font-size: 13px !important;
+    }
+    .botao-off {
+      background-color: #727272;
+      color: #484848;
+      font-size: 13px !important;
+    }
+
+}

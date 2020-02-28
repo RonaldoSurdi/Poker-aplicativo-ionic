@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PokerClubs - Mensagens</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider class="mensagens-list-divider">
+      Toque no título da mensagem para visualizá-la
+      <br *ngIf="possuiMensagens">  
+      <button *ngIf="possuiMensagens" class="botao-excluir-todas" (click)="deletarTodasMensagens()">Excluir todas</button>
+    </ion-item-divider>
+  </ion-list> 
+  <ion-grid>
+    <ion-row class="linha-mensagem" *ngFor="let mensagem of mensagens">
+      <ion-col col-8>
+        <table>
+          <tr>
+            <td colspan="2">
+              <p class="nome-clube-mensagem" [ngClass]="mensagem.read == 'S' ? 'mensagem-lida' : 'mensagem-nao-lida'" (click)="openMensagem(mensagem.id)" [innerHTML]="mensagem.club.name"></p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ion-icon class="icone-deletar-mensagem" name="trash" (click)="deletarMensagem(mensagem.id)"></ion-icon>
+            </td>
+            <td>
+              <label class="titulo-mensagem" [ngClass]="mensagem.read == 'S' ? 'mensagem-lida' : 'mensagem-nao-lida'" (click)="openMensagem(mensagem.id)" [innerHTML]="mensagem.title"></label>        
+            </td>
+          </tr>
+        </table>                  
+      </ion-col>
+      <ion-col col-4 align-self-end>        
+        <label class="data-mensagem" [ngClass]="mensagem.read == 'S' ? 'mensagem-lida' : 'mensagem-nao-lida'" [innerHTML]="mensagem.date"></label>
+      </ion-col>      
+    </ion-row>    
+  </ion-grid>  
+</ion-content>
+

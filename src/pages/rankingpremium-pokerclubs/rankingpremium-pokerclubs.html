@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PokerClubs - Ranking</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider class="ranking-list-divider">
+      Toque no torneio para visualizar o ranking
+    </ion-item-divider>
+    <ion-item class="ranking-list-itens" *ngFor="let ranking of rankings" (click)="openRanking(ranking.id, ranking.title)">      
+      <ion-icon name="trophy"></ion-icon>
+      &nbsp;&nbsp;
+      <span class="nome-ranking">{{ ranking.title }}</span>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+
+

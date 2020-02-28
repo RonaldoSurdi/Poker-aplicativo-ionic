@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Agenda  - PokerClubs</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let agenda of agendas">    
+    <ion-card-header>
+        <span [innerHTML]="agenda.week" class="agenda-dia-semana"></span>
+        &nbsp;&nbsp;-&nbsp;&nbsp;
+        <span [innerHTML]="agenda.date"></span>
+    </ion-card-header>
+    <ion-grid *ngFor="let evento of agenda.items">
+      <ion-row>
+        <ion-col>
+            <strong><span class="agenda-nome-programacao" [innerHTML]="evento.title"></span></strong>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <span [innerHTML]="evento.hour"></span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+            <span [innerHTML]="evento.description"></span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>    
+  </ion-card>
+</ion-content>

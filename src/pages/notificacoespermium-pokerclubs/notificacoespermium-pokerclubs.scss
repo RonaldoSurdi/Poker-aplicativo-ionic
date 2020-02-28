@@ -1,0 +1,81 @@
+page-notificacoespermium-pokerclubs {
+
+    .scroll-content {
+        background-color: black;
+    }
+
+    .notificacoes-list-divider {
+        background-color: black;
+        color: white;
+    }
+
+    .notificacoes-list-itens {
+        background-color: black;
+    }
+
+    .card {
+        background-color: black;
+    }
+
+    .titulo-notificacao {
+        color:  #999;
+    }
+
+    .data-notificacao {
+        color:  #999;
+    }
+
+    .tabela-notificacoes {
+        width: 100%
+    }
+
+    .linha-mensagem {
+        border-bottom: 1px solid #999;
+    }
+
+    .icone-mensagem {
+        color: #999;
+    }
+
+    .icone-deletar-mensagem {
+        color: #daae21;
+        font-size: 1.8em !important;
+        width: 1.0em !important;
+    }
+
+    .descricao-notificacao {
+        color:  #999;
+    }
+
+    .mensagem-lida {
+        font-weight: normal;
+    }
+
+    .mensagem-nao-lida {
+        font-weight: bold;
+    }
+
+    .botao-excluir-todas {
+        margin-top: 8px;
+        -webkit-border-radius: 7;
+        -moz-border-radius: 7;
+        border-radius: 7px;
+        font-family: Arial;
+        color: #000000;
+        font-size: 12px;
+        background: #daae21;
+        padding: 10px 20px 10px 20px;
+        border: 0px;
+        text-decoration: none;
+        width: 110px; 
+    }
+    
+    .botao-excluir-todas:hover {
+        background: #bd9211;
+        text-decoration: none;
+    }
+
+    ion-grid {
+        margin-top: -20px;
+    }
+}

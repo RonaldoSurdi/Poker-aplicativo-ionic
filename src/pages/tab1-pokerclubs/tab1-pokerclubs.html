@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>   
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>    
+    <ion-title>PokerClubs - Clubes próximos a você</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div #map_pokerclubs id="map_pokerclubs">
+    <div class="map_menu">
+      <button color="cinza" ion-button (click)="onAllClick($event)">Exibir Todos</button>
+    </div>
+  </div>
+</ion-content>

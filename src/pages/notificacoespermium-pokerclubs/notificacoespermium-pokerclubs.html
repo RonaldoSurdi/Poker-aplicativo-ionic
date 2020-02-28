@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PokerClubs - Mensagens</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider class="notificacoes-list-divider">
+      Toque no título da mensagem para visualizá-la    
+      <br *ngIf="possuiMensagens">  
+      <button *ngIf="possuiMensagens" class="botao-excluir-todas" (click)="deletarTodasMensagens()">Excluir todas</button>
+    </ion-item-divider>    
+  </ion-list>
+  <ion-grid>
+    <ion-row class="linha-mensagem" *ngFor="let mensagem of mensagens">
+      <ion-col col-8>
+        <table>
+          <tr>
+            <td>
+              <ion-icon class="icone-deletar-mensagem" name="trash" (click)="deletarMensagem(mensagem.id)"></ion-icon>
+            </td>
+            <td>
+              <label class="titulo-notificacao" [ngClass]="mensagem.read == 'S' ? 'mensagem-lida' : 'mensagem-nao-lida'" [innerHTML]="mensagem.title" (click)="openMensagem(mensagem.id)"></label>
+            </td>
+          </tr>    
+        </table>    
+      </ion-col>
+      <ion-col col-4 align-self-end>
+        <label class="data-notificacao" [ngClass]="mensagem.read == 'S' ? 'mensagem-lida' : 'mensagem-nao-lida'" [innerHTML]="mensagem.date" (click)="openMensagem(mensagem.id)"></label>
+      </ion-col>      
+    </ion-row>    
+  </ion-grid>  
+</ion-content>

@@ -1,0 +1,36 @@
+<!--<ion-menu [content]="content">
+  <ion-content>
+    <ion-list>
+      <button ion-item menuClose (click)="openPage('Tab1PokerclubsPage')"><ion-icon item-start [name]="locate" ></ion-icon>Mapa</button>
+      <button ion-item menuClose (click)="openPage('Tab2PokerclubsPage')"><ion-icon item-start [name]="thumbs-up" ></ion-icon>Indique um Clube</button>
+      <button ion-item menuClose (click)="openPage('LocalizarClubePokerclubsPage')"><ion-icon item-start [name]="search" ></ion-icon>Localize um Clube</button>
+      <button ion-item menuClose (click)="openPage('TodasmensagensPokerclubsPage')"><ion-icon item-start [name]="mail" ></ion-icon>Mensagens</button>
+      <button ion-item menuClose (click)="openPage('LoginPokerclubsPage')"><ion-icon item-start [name]="add" ></ion-icon>Cadastre-se</button>
+      <button ion-item menuClose (click)="openPage('SairPokerclubsPage')"><ion-icon item-start [name]="exit" ></ion-icon>Sair</button>
+    </ion-list>
+    <div *ngIf="logouFacebook" class="div-avatar">
+      <ion-avatar>
+        <img class="avatar-facebook" [src]="avatarFacebook">
+      </ion-avatar>
+      <span class="nome-facebook"[innerHTML]="nomeFacebook"></span>
+    </div>
+  </ion-content>
+</ion-menu>-->
+<ion-menu [content]="content">
+    <ion-content>
+        <ion-list>
+            <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+                <ion-icon item-start [name]="p.icon"></ion-icon>
+                {{ p.title }}
+            </button>
+        </ion-list>
+        <div *ngIf="logouFacebook" class="div-avatar">
+            <ion-avatar>
+                <img id="avatar-facebook" class="avatar-facebook" [src]="avatarFacebook" (click)="openPage('LoginPokerclubsPage')">
+            </ion-avatar>
+            <span id="nome-facebook" class="nome-facebook" [innerHTML]="nomeFacebook" (click)="openPage('LoginPokerclubsPage')"></span>
+        </div>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [swipeBackEnabled]="true" [root]="rootPage" #content></ion-nav>

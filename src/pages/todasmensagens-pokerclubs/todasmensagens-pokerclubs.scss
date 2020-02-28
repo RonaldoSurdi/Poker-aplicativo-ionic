@@ -1,0 +1,86 @@
+page-todasmensagens-pokerclubs {
+
+    .scroll-content {
+        background-color: black;
+    }
+
+    .mensagens-list-divider {
+        background-color: black;
+        color: white;
+    }
+
+    .mensagens-list-itens {
+        background-color: black;
+    }
+
+    .card {
+        background-color: black;
+    }
+
+    .titulo-mensagem {
+        color:  #999;
+    }
+
+    .data-mensagem {
+        color:  #999;
+    }
+
+    .tabela-mensagens {
+        width: 100%
+    }
+
+    .linha-mensagem {
+        border-bottom: 1px solid #999;
+    }
+
+    .icone-mensagem {
+        color: #999;
+    }
+
+    .icone-deletar-mensagem {
+        color: #daae21;
+        font-size: 1.8em !important;
+        width: 1.0em !important;
+    }
+
+    .descricao-mensagem {
+        color:  #999;
+    }
+
+    .mensagem-lida {
+        font-weight: normal;
+    }
+
+    .mensagem-nao-lida {
+        font-weight: bold;
+    }
+
+    .nome-clube-mensagem {
+        color:  #999;  
+    }
+
+    .botao-excluir-todas {
+        margin-top: 8px;
+        -webkit-border-radius: 7;
+        -moz-border-radius: 7;
+        border-radius: 7px;
+        font-family: Arial;
+        color: #000000;
+        font-size: 12px;
+        background: #daae21;
+        padding: 10px 20px 10px 20px;
+        border: 0px;
+        text-decoration: none;
+        width: 110px; 
+    }
+    
+    .botao-excluir-todas:hover {
+        background: #bd9211;
+        text-decoration: none;
+    }
+
+    ion-grid {
+        margin-top: -20px;
+    }
+
+}

@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PokerClubs - Etapas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider class="ranking-list-divider">
+      Toque na etapa para visualizar o ranking
+    </ion-item-divider>
+    <ion-item class="ranking-list-itens" *ngFor="let etapa of etapas" (click)="openJogadoresEtapa(etapa.idtorneio, etapa.idetapa, etapa.nomeetapa)">      
+      <ion-icon name="ribbon"></ion-icon>
+      &nbsp;&nbsp;
+      <span class="nome-ranking-torneios">{{ etapa.nomeetapa }}</span>
+    </ion-item>
+  </ion-list>
+</ion-content>

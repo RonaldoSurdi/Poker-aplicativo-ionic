@@ -1,0 +1,176 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+  cinza:      #38414e,
+  marron:     #daae21
+);
+
+
+$toolbar-md-title-text-color: white;
+$toolbar-ios-title-text-color: white;
+$toolbar-wp-title-text-color: white;
+
+$toolbar-md-title-font-size: 1.5rem;
+$toolbar-ios-title-font-size: 1.3rem;
+
+$navbar-ios-height: 15px;
+$navbar-md-height: 15px;
+
+$list-ios-border-color: #38414e;
+$list-md-border-color: #38414e;
+
+$text-input-highlight-color-valid: rgb(15, 53, 15);
+
+$label-ios-text-color-focused: #daae21;
+$label-md-text-color-focused: #daae21;
+
+$text-input-ios-highlight-color: #daae21;
+$text-input-md-highlight-color: #daae21;
+
+$loading-ios-text-color: white;
+$loading-md-text-color: white;
+
+
+$loading-ios-background: transparent;
+$loading-md-background: $loading-ios-background;
+$loading-wp-background: $loading-ios-background;
+
+$loading-md-box-shadow: none;
+$loading-ios-box-shadow: none;
+
+$segment-button-ios-font-size: 1.5rem;
+$segment-button-md-font-size: 1.5rem;
+
+$segment-button-ios-text-color: white;
+$segment-button-md-text-color: white;
+
+$toolbar-md-active-color: white;
+$toolbar-ios-active-color: white;
+
+$segment-button-ios-background-color: #c0871d;
+$segment-button-ios-background-color-activated: #daae21;
+
+$segment-button-ios-text-color: white;
+
+//Tabs 
+$tabs-md-tab-text-color: #999;
+$tabs-ios-tab-text-color: #999;
+
+$tabs-md-tab-icon-color: #999;
+$tabs-ios-tab-icon-color: #999;
+
+$tabs-md-tab-text-color-active: #daae21;
+$tabs-ios-tab-text-color-active: #daae21;
+
+$tabs-md-tab-icon-color-active: #daae21;
+$tabs-ios-tab-icon-color-active: #daae21;
+
+// Range
+$range-ios-bar-background-color: #999;
+$range-md-bar-background-color: #999;
+
+$range-ios-bar-active-background-color: #daae21;
+$range-md-bar-active-background-color: #daae21;
+
+// Spinner
+$loading-ios-spinner-bubbles-color: #daae21;
+$loading-md-spinner-bubbles-color: #daae21;
+
+// Search Bar
+$searchbar-ios-background-color: black;
+$searchbar-md-background-color: black;
+$searchbar-ios-input-search-icon-color: #daae21;
+$searchbar-md-input-search-icon-color: #daae21;
+$searchbar-ios-input-text-color: #999;
+$searchbar-md-input-text-color: #999;
+$searchbar-ios-input-background-color: #202429;
+$searchbar-md-input-background-color: #202429;
+$searchbar-ios-input-clear-icon-color: #daae21;
+$searchbar-md-input-clear-icon-color: #daae21;
+$searchbar-ios-input-placeholder-color: white;
+
+// Menu
+$background-ios-color: black;
+$background-md-color: black;
+$menu-ios-background: black;
+$menu-md-background: black;
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+.loading {
+   opacity: 0.7;
+}
+
+.custom-spinner-splash {
+   background: unset;
+   position: fixed;
+   left: 10%;
+   bottom: 0;
+   width: 80%;
+   z-index: 99999999;
+   img {
+      width: 100%;
+      height: auto;
+   }
+}

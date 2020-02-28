@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PokerClubs - Clube</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngIf="possuiLogo" justify-content-center align-items-center>  
+      <ion-col col-3>               
+        <img [src]="logoClube">
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="! possuiLogo" align-items-center>
+      <ion-col align-self-center>
+        <strong [innerHTML]="nomeClube" class="nome-clube" ></strong>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col col-10>
+        <ion-grid>
+          <ion-row justify-content-center align-items-center> 
+            <ion-col>
+              <img src="assets/imgs/o-clube.png" (click)="openOClubePremium()">
+            </ion-col>          
+            <ion-col>
+              <img src="assets/imgs/torneios.png" (click)="openTorneiosPremium()">
+            </ion-col>
+            <ion-col>
+              <img [src]="imagemMensagem" (click)="openMensagensPremium()">
+            </ion-col>
+          </ion-row>
+          <ion-row justify-content-center>
+            <ion-col>
+                <img [src]="imagemSeguirOuSeguindo" (click)="openSeguindoPremium()">
+            </ion-col>
+            <ion-col>
+                <img src="assets/imgs/ranking.png" (click)="openRankingPremium()">
+            </ion-col>
+            <ion-col>
+                <img src="assets/imgs/ao-vivo.png" (click)="openAoVivoPremium()">
+            </ion-col>            
+          </ion-row>
+          <ion-row justify-content-center>
+            <ion-col>
+                <img src="assets/imgs/eventos.png" (click)="openAgendaPremium()">
+            </ion-col>
+            <ion-col>
+                <img src="assets/imgs/fotos.png" (click)="openFotosPremium()">
+            </ion-col>
+            <ion-col>
+                <img src="assets/imgs/tracar-rota-premium.png" (click)="openTracarRota()">
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+    <!--
+    <ion-row justify-content-center>
+      <ion-col col-5>
+        <img src="assets/imgs/logo-pokerclubs.png">
+      </ion-col>
+    </ion-row>
+    -->
+  </ion-grid>
+</ion-content>

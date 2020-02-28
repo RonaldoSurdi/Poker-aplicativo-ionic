@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Notificações - PokerClubs</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <p class="data-mensagem" [innerHTML]="data"></p>           
+      <p class="titulo-mensagem" [innerHTML]="titulo"></p>
+      <p class="nome-clube-mensagem" [innerHTML]="nomeClube"></p>
+      <p>&nbsp;</p>
+      <p class="texto-mensagem" [innerHTML]="texto"></p>
+      <img *ngIf="mensagemImagem" [src]="imagem" (click)="showZoomFoto(titulo, imagem)">
+      <p>
+      <ion-item *ngIf="usuarioCadastrado" class="item-botao-excluir" text-right>
+        <button class="botao-excluir" ion-button (click)="excluirMensagem(id)">
+          Excluir
+        </button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

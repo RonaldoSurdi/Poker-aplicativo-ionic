@@ -1,0 +1,87 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Promoções - PokerClubs</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Titulo -->
+    <ion-row align-items-end class="row-promocoes-cabecalho-titulo">
+      <ion-col>
+        <div>
+          <span class="promocoes-descricao-carta-da-sorte">Carta da Sorte</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- Sub-Titulo -->
+    <ion-row justify-content-center class="row-promocoes-cabecalho-sub-titulo">
+      <ion-col>
+        <div>
+          <span class="promocoes-descricao-indicativo">Clique em uma das cartas e</span>
+          <br>
+          <span class="promocoes-descricao-indicativo">veja qual será seu prêmio.</span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <!-- Primeira linha de cartas -->
+    <ion-row justify-content-center align-items-center class="row-promocoes-cartas-01">
+      <!-- Carta 01 -->
+      <ion-col col-3>
+        <img id="carta_1" src="assets/imgs/promocoes/verso-carta.png" (click)="viraCarta(0)">
+      </ion-col>
+      <!-- Carta 02 -->
+      <ion-col col-3>
+        <img id="carta_2" src="assets/imgs/promocoes/verso-carta.png" (click)="viraCarta(1)">      
+      </ion-col>
+      <!-- Carta 03 -->
+      <ion-col col-3>
+        <img id="carta_3" src="assets/imgs/promocoes/verso-carta.png" (click)="viraCarta(2)">
+      </ion-col>
+    </ion-row>
+    <!-- Segunda linha de cartas -->
+    <ion-row justify-content-center class="row-promocoes-cartas-02">        
+        <!-- Carta 04 -->
+        <ion-col col-3>
+          <img id="carta_4" src="assets/imgs/promocoes/verso-carta.png" (click)="viraCarta(3)">
+        </ion-col>
+        <!-- Carta 05 -->
+        <ion-col col-3>
+          <img id="carta_5" src="assets/imgs/promocoes/verso-carta.png" (click)="viraCarta(4)">
+        </ion-col>
+        <!-- Carta 06 -->
+        <ion-col col-3>
+          <img id="carta_6" src="assets/imgs/promocoes/verso-carta.png" (click)="viraCarta(5)">
+        </ion-col>       
+    </ion-row>
+    <!-- Descricao do Premio -->
+    <ion-row align-items-center class="row-promocoes-descricao-premio-parabens">
+      <ion-col>
+        <div>          
+          <span class="promocoes-descricao-parabens" [innerHTML]="textoParabens"></span>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row align-items-start class="row-promocoes-descricao-premio-voce-ganhou">  
+      <ion-col>
+        <div>
+          <span class="promocoes-descricao-carta" [innerHTML]="textoCarta"></span>
+          <br>
+          <span class="promocoes-descricao-premio" [innerHTML]="textoPremio"></span>
+          <br>
+          <span class="promocoes-descricao-torneio" [innerHTML]="textoNomeClube"></span>
+        </div>
+      </ion-col>      
+    </ion-row>
+    <!-- Rodape Logo do PokerClubs -->
+    <ion-row justify-content-center class="row-promocoes-rodape">
+        <ion-col col-5 align-self-end>
+          <div>
+            <img src="assets/imgs/logo-pokerclubs.png">
+          </div>
+        </ion-col>      
+      </ion-row>
+  </ion-grid>
+</ion-content>

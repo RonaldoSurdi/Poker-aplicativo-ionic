@@ -1,0 +1,21 @@
+repositories {
+  maven { url 'https://maven.google.com' }
+  mavenCentral()
+  flatDir{
+    dirs 'src/main/libs', 'libs'
+  }
+  jcenter()
+}
+
+dependencies {
+  compile(name:'tbxml-android', ext:'aar')
+}
+
+android {
+  compileSdkVersion 26
+
+  packagingOptions {
+    exclude 'README'
+    exclude 'LICENSE'
+  }
+}

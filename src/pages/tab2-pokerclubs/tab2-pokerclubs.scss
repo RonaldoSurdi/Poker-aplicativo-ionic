@@ -1,0 +1,40 @@
+page-tab2-pokerclubs {
+
+    .scroll-content {
+        background-color: black;
+    }
+
+    /* 
+    .object_transparent {
+    background: none;
+    color: none;
+    border: none;
+    }
+    */
+
+    .indique-list-itens {
+        background-color: black;
+    }
+
+    ion-content ion-input {
+        color: white;
+    }
+
+    ion-content ion-datetime {
+        color: white;
+    }
+
+    ion-content ion-select {
+        color: white;
+    }
+    
+    ion-content ion-list ion-list-header {
+        background-color: #38414e;
+        color: white;
+    }
+
+    .indique-list-divider {
+        background-color: black;
+        color: white;
+    }
+}

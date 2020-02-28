@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PokerClubs - O Clube</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+
+    <!-- Nome do Clube -->
+    <ion-row>
+      <ion-col text-center>
+          <h5><span class="dados-clube" [innerHTML]="nomeClube"></span></h5>
+      </ion-col>
+    </ion-row>
+
+    <!-- Logo do Clube -->
+    <ion-row justify-content-center>  
+      <ion-col col-3>
+        <img [src]="logoClube">
+      </ion-col>
+    </ion-row>
+
+    <!-- Espaco em braco -->
+    <ion-row>
+      <ion-col>
+        &nbsp;
+      </ion-col>          
+    </ion-row>
+
+    <!-- Endereco -->
+    <ion-row>          
+      <ion-col>
+          <span class="labels">Endereço: </span><span class="dados-clube" [innerHTML]="enderecoClube"></span>
+      </ion-col>
+    </ion-row>
+    
+    <!-- Telefone -->
+    <ion-row>
+      <ion-col>
+          <span class="labels">Telefone: </span><span class="dados-clube dados-clube-telefone" [innerHTML]="telefoneClube" (click)="ligarTelefoneClube(telefoneClube)"></span>
+      </ion-col>
+    </ion-row>
+
+    <!-- Site -->
+    <ion-row>
+      <ion-col>
+          <span class="labels">Site: </span><span class="dados-clube dados-clube-site" [innerHTML]="siteClube" (click)="abrePagina(siteClube)"></span>
+      </ion-col>
+    </ion-row>
+
+    <!-- Facebook -->
+    <ion-row>
+      <ion-col>
+          <span class="labels">Facebook: </span><span class="dados-clube dados-clube-facebook" [innerHTML]="facebookClube" (click)="abrePagina(facebookClube)"></span>
+      </ion-col>
+    </ion-row>
+
+    <!-- Instagran -->
+    <ion-row>
+      <ion-col>
+          <span class="labels">Instagram: </span><span class="dados-clube dados-clube-instagram" [innerHTML]="instagramClube" (click)="abrePagina(instagramClube)"></span>
+      </ion-col>
+    </ion-row>
+
+    <!-- Mesas -->
+    <ion-row>
+      <ion-col>
+          <span class="labels">Número de Mesas: </span><span class="dados-clube" [innerHTML]="mesasClube"></span>
+      </ion-col>
+    </ion-row>
+
+    <!-- Comodidades -->
+    <ion-row>
+      <ion-col>
+        <span class="labels">Comodidades:</span>
+        <br>
+        <table class="dados-clube-table">
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr *ngFor="let comodidade of comodidadesClube">
+            <td [innerHTML]="comodidade.description"></td>               
+          </tr>            
+        </table>
+      </ion-col>
+    </ion-row>
+
+    <!-- Horários -->
+    <ion-row>
+      <ion-col>
+          <span class="labels">Horários:</span>
+          <br>
+          <table class="dados-clube-table">
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr *ngFor="let horario of horarios">
+              <td [innerHTML]="horario.dia"></td>
+              <td [innerHTML]="horario.horario"></td>
+            </tr>            
+          </table>
+      </ion-col>
+    </ion-row>
+
+    <!-- Espaco em braco -->
+    <ion-row>
+      <ion-col>
+        &nbsp;
+      </ion-col>          
+    </ion-row>
+
+    <!-- Descricao -->
+    <ion-row>
+      <ion-col>
+          <span class="labels">Descrição: </span><span class="dados-clube" [innerHTML]="descricaoClube"></span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Fotos -->
+  <ion-card *ngFor="let foto of fotosClube">
+    <img [src]="foto.link" (click)="showImagemClube(foto.link, foto.description)">
+
+    <ion-card-content>
+      <p class="dados-clube" [innerHTML]="foto.description"></p>
+    </ion-card-content> 
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>PokerClubs - Localizar Clube</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="localizar">
+      <ion-segment-button value="localizar-cidade">
+        Cidade
+      </ion-segment-button>
+      <ion-segment-button value="localizar-clube">
+        Clube
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div [ngSwitch]="localizar">
+
+    <!-- Localizar Cidade -->
+    <ion-list *ngSwitchCase="'localizar-cidade'">
+        <ion-item class="localizar-list-itens">
+            <span>Digite o nome da cidade que deseja:</span>
+        </ion-item>
+        <ion-item class="localizar-list-itens">
+          <ion-searchbar placeholder="Digite a cidade" [showCancelButton]="true" [cancelButtonText]="Cancelar" [animated]="true" [debounce]="1000" [(ngModel)]="searchCidades" (ionInput)="getCidades($event)" (ionClear)="escondeListaCidades()"></ion-searchbar>
+          <ion-list *ngIf="exibirListaCidades">
+            <ion-item *ngFor="let cidade of cidades" (click)="selecionaCidade(cidade.id, cidade.text, cidade.lat, cidade.lng)">
+              {{ cidade.text }}
+            </ion-item>
+          </ion-list>
+        </ion-item>
+        <ion-item class="localizar-list-itens">
+            <button color="cinza" class="localizar-button-send" ion-button block (click)="localizarClubesCidade()">Localizar</button>
+            <button color="cinza" class="localizar-button-close" ion-button block (click)="voltarInicio()">Voltar</button>
+        </ion-item>      
+      </ion-list>
+    
+      <!-- Localizar Clube -->
+      <ion-list *ngSwitchCase="'localizar-clube'">
+        <ion-item class="localizar-list-itens">
+            <span>Digite o nome do clube que deseja:</span>
+        </ion-item>
+        <ion-searchbar placeholder="Digite o clube" [showCancelButton]="true" [cancelButtonText]="Cancelar" [animated]="true" [debounce]="1000" [(ngModel)]="searchClubes" (ionInput)="getClubsAutoComplete($event)" (ionClear)="escondeListaClubes()"></ion-searchbar>
+        <ion-list *ngIf="exibirListaClubes">
+          <ion-item *ngFor="let clube of clubes" (click)="selecionaClube(clube.id, clube.name, clube.lat, clube.lng)">
+            {{ clube.name }}
+          </ion-item>
+        </ion-list>
+        <ion-item class="localizar-list-itens">
+          <button color="cinza" class="localizar-button-send" ion-button block (click)="localizarClubesAutoComplete()">Localizar</button>
+          <button color="cinza" class="localizar-button-close" ion-button block (click)="voltarInicio()">Voltar</button>
+        </ion-item>      
+      </ion-list>
+  </div>
+</ion-content>

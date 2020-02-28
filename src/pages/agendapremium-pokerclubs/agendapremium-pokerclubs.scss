@@ -1,0 +1,28 @@
+page-agendapremium-pokerclubs {
+    .scroll-content {
+        background-color: black;
+    }
+
+    ion-content ion-card ion-card-header {
+        background-color: #222;
+    }
+
+    ion-content ion-card ion-card-header span {
+        background-color: #222;
+        color: #a7a8aa
+    }
+
+    ion-content ion-card ion-grid {
+        color: #a7a8aa;
+        background-color: black;
+    }
+
+    .agenda-nome-programacao {
+        text-decoration: underline;
+        color: #daae21;
+    }
+
+    .agenda-dia-semana {
+        text-transform: uppercase;
+    }
+}

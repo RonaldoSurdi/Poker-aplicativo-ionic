@@ -1,0 +1,51 @@
+page-localizar-clube-pokerclubs {
+
+    .scroll-content {
+        background-color: black;
+    }
+
+    ion-content div ion-list ion-list-header {
+        background-color: #38414e;
+        color: white;
+    }
+
+    .localizar-list-itens {
+        background-color: black;
+        color: white;
+    }
+
+    .localizar-button-send {
+        //color: #8bab10;
+        font-size: 18px !important;
+        padding: 22px 20px 20px 20px !important;
+    }
+
+    .localizar-button-close {
+        //color: #8bab10;
+        font-size: 18px !important;
+        padding: 11px 15px 15px 15px !important;
+        margin-top: 10px !important;
+    }
+
+    .localizar-range-label {
+        color: #999;
+    }
+
+    .localizar-checkbox-label {
+        color: #999;
+    }
+
+    ion-content ion-range {
+        color: white;
+    }    
+
+    ion-segment-button {
+        border-color: white !important;
+        color: white !important;
+    }
+
+    ion-searchbar {
+        caret-color: white;
+    }
+
+}

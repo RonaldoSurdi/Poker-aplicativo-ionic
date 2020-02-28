@@ -1,0 +1,23 @@
+page-exibepremio-promocoes-pokerclubs {
+
+    ion-content {
+        background-image: url("../assets/imgs/backgroundImagePokerClubs.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    
+    ion-grid {
+        height: 100%;
+    }
+
+    .row-exibe-premio-carta {
+        height: 50%;
+        color: white;
+    }
+
+    .row-exibe-premio-descricao {
+        height: 50%;
+        color: white;
+    }
+}

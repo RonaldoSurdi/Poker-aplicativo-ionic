@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{nomeTorneio}}<br><span class="clbname">{{nomeClube}}</span></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content #contentArea>
+  <ion-list>
+    <ion-item *ngFor="let chat of chats" no-lines>
+      <div class="chat-status" text-center *ngIf="chat.tipo==='inscrito'||chat.tipo==='entrou'||chat.tipo==='saiu';else mensagem">
+        <span class="chat-date">{{chat.data | relativeTime}}</span>
+        <span class="chat-content-center">{{chat.mensagem}}</span>
+      </div>
+      <ng-template #mensagem>
+        <div class="chat-mensagem" text-right *ngIf="chat.jogador===nomeJogador">
+          <div class="right-bubble">
+            <span class="msg-name">Você </span>
+            <span class="msg-date">{{chat.data | relativeTime}}</span>
+            <div [innerHtml]="chat.mensagem"></div>
+          </div>
+        </div>
+        <div class="chat-mensagem" text-left *ngIf="chat.jogador!==nomeJogador">
+          <div class="left-bubble">
+            <span class="msg-name">{{chat.jogador}} </span>
+            <span class="msg-date">{{chat.data | relativeTime}}</span>
+            <div [innerHtml]="chat.mensagem"></div>
+          </div>
+        </div>
+      </ng-template>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <div class="tx1">
+      <ion-textarea #myMessage type="text" [(ngModel)]="data.mensagem" name="mensagem" placeholder="Digite sua mensagem" autocorrect autosize></ion-textarea>
+  </div>
+  <div class="bt1">
+    <div id="sendmessage" class="ic1" (click)="sendMensagem()"></div>
+  </div>
+</ion-footer>

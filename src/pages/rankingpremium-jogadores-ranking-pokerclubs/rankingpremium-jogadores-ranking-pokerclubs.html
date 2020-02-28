@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PokerClubs - Ranking</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list-header>
+      <h2><strong class="nome-torneio" [innerHTML]="nomeTorneio"></strong></h2>
+      <h2><strong class="nome-etapa" [innerHTML]="nomeEtapa"></strong></h2>    
+    </ion-list-header>
+    <ion-card *ngFor="let jogador of jogadores">
+      <ion-item class="item-nome-jogador">
+        <ion-avatar item-start (click)="showZoomFoto(jogador.avatar, jogador.name)">
+          <img [src]="jogador.avatar">
+        </ion-avatar>                
+        <table class="tabela-classificacao-ranking" border="0">
+          <tr>
+            <td>
+              <h2>
+                  <strong class="posicao-jogador" [innerHTML]="jogador.position"></strong>
+                  <strong class="nome-jogador" [innerHTML]="jogador.name"></strong>
+              </h2>
+            </td>
+          </tr>
+          <tr>            
+            <td align="right">
+              <strong class="pontos-jogador" [innerHTML]="jogador.point"></strong>&nbsp;pontos
+            </td>
+          </tr>
+        </table>
+      </ion-item>           
+    </ion-card>
+</ion-content>

@@ -1,0 +1,43 @@
+page-oclubepremium-pokerclubs {
+
+    .scroll-content {
+        background-color: black;
+    }
+
+    ion-content ion-grid ion-row ion-col {
+        color: white;
+    }
+
+    .dados-clube {
+        color: #999;
+    }
+
+    .labels {
+        color: rgb(128, 127, 127);   
+    }
+
+    .dados-clube-table {
+        color: #999;
+        width: 100%;
+    }
+
+    .dados-clube-telefone {
+        text-decoration: underline;
+    }
+
+    .dados-clube-site {
+        text-decoration: underline;
+    }
+
+    .dados-clube-facebook {
+        text-decoration: underline;
+    }
+
+    .dados-clube-instagram {
+        text-decoration: underline;
+    }
+
+    ion-content ion-card ion-card-content {
+        background-color: #222;
+    }
+}

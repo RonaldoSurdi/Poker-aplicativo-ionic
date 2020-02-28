@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PokerClubs - Minha Conta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scrollbar-y="true" has-bouncing="false">
+  <!-- Logo -->
+  <div class="lg-tela">
+    <div class="lg-logo">
+      <img src="assets/imgs/login/logo-com-as-naipes.png">
+    </div>
+
+    <!-- Conteudo -->
+    <div  class="lg-content">
+      <!-- Email -->
+      <div *ngIf="exibeUsuarioESenha" class="lg-email">
+        <table>
+          <tr>
+            <td>
+              <ion-icon name="person"></ion-icon>
+            </td>
+            <td>
+              <ion-input type="text" [(ngModel)]="email" name="email" id="email" placeholder="usuário/e-mail"></ion-input>
+            </td>
+          </tr>
+        </table>     
+      </div> 
+      <div *ngIf="exibeUsuarioESenha" class="lg-divisao">
+
+      </div>
+      <!-- Senha -->
+      <div *ngIf="exibeUsuarioESenha" class="lg-senha">
+        <table>            
+          <tr>
+            <td>
+              <ion-icon name="lock"></ion-icon>
+            </td>
+            <td>
+              <ion-input type="password" [(ngModel)]="senha" name="senha" id="senha" placeholder="senha"></ion-input>
+            </td>
+          </tr>
+        </table>     
+      </div>
+      <div *ngIf="exibeUsuarioESenha" class="lg-botao-entrar">
+        <img class="image-button" src="assets/imgs/login/button-entrar.png" (click)="validUser();">
+      </div>
+    </div> 
+    <div class="lg-fixed-footer">
+      <!-- Login Facebook -->
+      <div class="lg-facebook" *ngIf="numberPage&&!exibeUsuarioESenha">
+          <img class="image-button" src="assets/imgs/login/button-facebook.png" (click)="logarFacebook()">
+      </div>
+      <!-- Entrar -->
+      <div class="lg-footer">
+        <div *ngIf="numberPage&&!exibeUsuarioESenha">
+          <span>Clique aqui e <b (click)="criarNovaConta()" >CADASTRE-SE</b></span>
+          <br><br>
+          <span>Já tem uma conta? <b (click)="exibirLogin()">ENTRAR</b></span><br>
+        </div>
+        <div *ngIf="!numberPage&&!exibeUsuarioESenha">
+          <div class="div-avatar-i">
+            <ion-avatar>
+              <img class="avatar-facebook-i" [src]="avatarFacebook" >
+            </ion-avatar>
+            <span class="nome-facebook-i" [innerHTML]="nomeFacebook" ></span>
+          </div>
+          <br>
+          <button color="cinza" ion-button block (click)="desconectarLogin()">DESCONECTAR</button>
+        </div>
+        <br><br>
+        <div *ngIf="exibeUsuarioESenha" class="btvoltar">
+          <button  color="cinza" ion-button block (click)="exibirLogin()">VOLTAR</button><br><br><br>
+        </div>
+        <div class="logofoot">
+          <img src="assets/imgs/saintec.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

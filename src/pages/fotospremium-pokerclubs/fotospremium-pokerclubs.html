@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PokerClubs - Fotos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let foto of fotos">
+      <ion-card-content>
+        <p class="descricao-foto" [innerHTML]="foto.description"></p>
+        <p>&nbsp;</p>
+        <img [src]="foto.photo" (click)="showZoomFoto(foto.photo, foto.description)">        
+      </ion-card-content> 
+    </ion-card>
+</ion-content>

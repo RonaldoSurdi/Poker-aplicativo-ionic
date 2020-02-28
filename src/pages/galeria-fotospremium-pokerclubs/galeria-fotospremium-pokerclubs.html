@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PokerClubs - Galeria de Fotos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider class="galeria-fotos-list-divider">
+      Toque na foto para exibir mais fotos
+    </ion-item-divider>
+  </ion-list>
+  <ion-card *ngFor="let galeria of galerias">
+      <ion-card-content>
+        <p class="titulo-galeria" [innerHTML]="galeria.title"></p>
+        <p>&nbsp;</p>
+        <img [src]="galeria.photo" (click)="openFotosDaGaleria(galeria.id)">
+        <p>&nbsp;</p>
+        <p class="data-galeria" [innerHTML]="galeria.date"></p>
+        <p class="descricao-galeria" [innerHTML]="galeria.description"></p>
+      </ion-card-content> 
+    </ion-card>
+</ion-content>

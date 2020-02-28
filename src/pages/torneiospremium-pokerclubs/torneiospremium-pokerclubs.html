@@ -1,0 +1,80 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PokerClubs - Torneios</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let torneio of torneios">
+
+      <!-- Imagem do Torneio -->
+      <img [src]="torneio.folder">
+
+      <!-- Nome do Torneio -->
+      <ion-item class="item-nome-torneios">
+          <h2><strong class="nome-torneios" [innerHTML]="torneio.name"></strong></h2>
+      </ion-item>
+
+      <!-- Datas do Torneio -->
+      <ion-item class="item-nome-torneios">
+        <table border="0">
+          <tr *ngFor="let data of torneio.dates">
+            <td>
+              Data:&nbsp;&nbsp;
+            </td>
+            <td>
+              <h2><strong class="datas-torneios" [innerHTML]="data.day"></strong></h2>   
+            </td>
+            <td>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+              Hora:&nbsp;&nbsp;
+            </td>
+            <td>
+              <h2><strong class="datas-torneios" [innerHTML]="data.hour"></strong></h2>
+            </td>
+          </tr>          
+        </table>
+      </ion-item>
+
+      <!-- Descricao do Torneio -->
+      <ion-card-content>
+        <p class="descricao-torneios" [innerHTML]="torneio.description"></p>
+      </ion-card-content>
+
+      <!-- Botoes -->
+      <ion-item text-right class="item-nome-torneios">
+          <button class="botao-inscreva-se" *ngIf="torneio.subscriptionapp === 'S'" ion-button icon-start (click)="inscrevaseTorneio(torneio.id, torneio.name, torneio.promotion)">
+              <div class="botao-ico"><ion-icon name="create"></ion-icon></div>
+              <div class="botao-lb">Inscreva-se</div>
+          </button>
+          <button class="botao-chat" *ngIf="torneio.subscriptionapp === 'S'" ion-button icon-start (click)="chatTorneio(torneio.id, torneio.name)">
+              <div class="botao-ico"><ion-icon name="chatboxes"></ion-icon></div>
+              <div class="botao-lb">Chat</div>
+          </button>
+          <button class="botao-social" *ngIf="torneio.subscriptionapp === 'S'" ion-button icon-start (click)="compartilharTorneio(torneio.name, torneio.folder)">
+              <div class="botao-ico"><ion-icon name="share"></ion-icon></div>
+              <div class="botao-lb">Share</div>
+          </button>
+          <button class="botao-off" *ngIf="torneio.subscriptionapp === 'N'" ion-button icon-start disabled>
+              <div class="botao-ico"><ion-icon name="create"></ion-icon></div>
+              <div class="botao-lb">Inscreva-se</div>
+          </button>
+          <button class="botao-off" *ngIf="torneio.subscriptionapp === 'N'" ion-button icon-start disabled>
+              <div class="botao-ico"><ion-icon name="chatboxes"></ion-icon></div>
+              <div class="botao-lb">Chat</div>
+          </button>
+          <button class="botao-off" *ngIf="torneio.subscriptionapp === 'N'" ion-button icon-start disabled>
+              <div class="botao-ico"><ion-icon name="share"></ion-icon></div>
+              <div class="botao-lb">Share</div>
+          </button>
+      </ion-item>
+
+  </ion-card>
+</ion-content>
+
+

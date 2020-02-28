@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PokerClubs - Cadastre-se</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="dadosRegister" (ngSubmit)="saveRegister();">
+        <ion-list class="object_transparent">
+            
+            <ion-item-divider class="register-list-divider">
+                Informe todos os dados
+            </ion-item-divider>
+
+            <!-- Nome Completo -->
+            <ion-item class="register-list-itens">
+                <ion-label class="label-register" floating>Nome Completo</ion-label>
+                <ion-input  type="text" maxlength="50" #nome formControlName="nome" value=""></ion-input>    
+            </ion-item>
+
+            <!-- Apelido -->
+            <ion-item class="register-list-itens">
+                <ion-label class="label-register" floating>Apelido</ion-label>
+                <ion-input  type="text" maxlength="50" #apelido formControlName="nome" value=""></ion-input>
+            </ion-item>
+
+            <!-- Telefone -->
+            <ion-item class="register-list-itens">
+                <ion-label class="label-register" floating>Telefone (Opcional)</ion-label>
+                <ion-input  type="text" maxlength="50" #telefone formControlName="telefone" value=""></ion-input>
+            </ion-item>
+
+            <!-- E-Mail -->
+            <ion-item class="register-list-itens">
+                <ion-label class="label-register" floating>E-Mail</ion-label>
+                <ion-input type="email" maxlength="50" #email formControlName="email" value=""></ion-input>
+            </ion-item>
+
+            <!-- Senha -->
+            <ion-item class="register-list-itens">
+                <ion-label class="label-register" floating>Senha</ion-label>
+                <ion-input  type="password" maxlength="50" #senha formControlName="senha" value=""></ion-input>
+            </ion-item>
+
+            <!-- Confirmar Senha -->
+            <ion-item class="register-list-itens">
+                <ion-label class="label-register" floating>Confirmar senha:</ion-label>
+                <ion-input  type="password" maxlength="50" #confirmarsenha formControlName="confirmarsenha" value=""></ion-input>
+            </ion-item>
+
+            <ion-item class="register-list-itens">
+                <button color="cinza" ion-button block class="btcadastrar">CADASTRAR</button>
+            </ion-item>
+        </ion-list>
+    </form>
+    
+</ion-content>

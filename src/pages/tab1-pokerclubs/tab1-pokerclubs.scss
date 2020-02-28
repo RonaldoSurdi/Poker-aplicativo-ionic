@@ -1,0 +1,49 @@
+page-tab1-pokerclubs {
+  
+  ion-content {
+    background-color: #38414e;
+  }
+  
+  #map_pokerclubs {
+    height: 100%;
+    width: 100%;
+    background-color: #38414e;
+    overflow: hidden;
+    .map_menu {
+      position: absolute;
+      bottom: 14px;
+      left: 0px;
+      width: 50px;
+      height: 30px;
+      button {
+        display: inline-block;
+        margin: 4px;
+      }
+    }
+  }
+
+  ion-navbar.toolbar
+  {
+    color: white;
+  }
+  
+}
+
+/*.gmnoprint, .gm-style-cc, .gm-style-mtc {
+  display:none;
+}
+.gm-style a[rel="noopener"] {
+  display:none !important;
+}*/
+
+/*#map_poker .gm-style > div:not(:first-child) { display: none; }*/
+
+/*a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+  display:none;
+}
+.gmnoprint div {
+  background:none !important;
+}*/

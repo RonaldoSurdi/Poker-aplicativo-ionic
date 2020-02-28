@@ -1,0 +1,47 @@
+page-register-pokerclubs {
+
+  .scroll-content {
+    background-color: black;
+  }
+
+  .object_transparent {
+    background: none;
+    color: transparent;
+    border: none;
+  }
+
+  .register-list-itens {
+    background-color: black;
+  }
+
+  .btcadastrar {
+    font-size: 18px;
+  }
+
+  ion-content ion-input {
+    color: white;
+  }
+
+  ion-content ion-datetime {
+    color: white;
+  }
+  
+  ion-content ion-list ion-list-header {
+    background-color: #01060e;
+    color: white;
+  }
+
+  .register-list-divider {
+    background-color: black;
+    color: white;
+  }
+
+  ion-input {
+    caret-color: white;
+  }
+
+  .label-register {
+    color: white !important;
+  }
+
+}

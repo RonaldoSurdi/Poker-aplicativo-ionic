@@ -1,4 +1,7 @@
-# pokerclubs-app
+# Aplicativo Poker
 
 Aplicativo desenvolvido em Ionic
-Android e iOS
+
+Plataformas:
+- Android
+- iOS

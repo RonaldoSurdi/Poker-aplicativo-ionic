@@ -98,7 +98,7 @@
     "sw-toolbox": "3.6.0",
     "ts-md5": "^1.2.4",
     "uk.co.workingedge.phonegap.plugin.launchnavigator": "^4.2.2",
-    "webpack-jquery-ui": "^1.0.0",
+    "webpack-jquery-ui": "^2.0.1",
     "zone.js": "0.8.26"
   },
   "devDependencies": {
